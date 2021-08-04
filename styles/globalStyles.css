@@ -3,7 +3,7 @@
     --background-color: #222;
     --main-color: #454545;
     --text-color: #fff;
-    --color-blue: #1f2c7a;
+    --color-blue: green;
 }
 
 
@@ -15,6 +15,7 @@
     padding: 0;
     background-color: var(--background-color);
     overflow: hidden;
+    font-family: sans-serif;
 }
 
 .container {
@@ -35,4 +36,12 @@ input[type='number'] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+.DetailsTitle {
+    color: var(--text-color);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: serif;
 }

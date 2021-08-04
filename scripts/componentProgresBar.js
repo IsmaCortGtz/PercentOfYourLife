@@ -20,7 +20,6 @@ class ProgresBar extends HTMLElement {
     connectedCallback(){
 
         this.setAttribute("class", "ProgresBar");
-        this.setAttribute("id", "MainProgres");
         
 
         var Holder = document.createElement('div');

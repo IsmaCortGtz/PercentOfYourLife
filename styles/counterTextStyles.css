@@ -1,0 +1,25 @@
+.CounterText {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.CounterHolder {
+    width: 60%;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: bold;
+}
+
+.CounterCounter {
+    width: 15%;
+    color: var(--text-color);
+    text-align: right;
+}
+
+.CounterTotal {
+    width: 25%;
+    color: var(--text-color);
+    margin-left: 5px;
+}
