@@ -20,6 +20,8 @@
 
 .ProgresText {
     width: 20%;
+    max-width: 90px;
+    min-width: 65px;
     height: 100%;
     text-align: center;
     color: var(--text-color);
