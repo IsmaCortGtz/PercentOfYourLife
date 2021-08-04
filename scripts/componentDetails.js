@@ -10,9 +10,6 @@ class DetailsPage extends HTMLElement {
         this.style.width = "100%";
         this.setAttribute("id", "detailsPage")
 
-        var Title = document.createElement("h1");
-        Title.setAttribute("class", "DetailsTitle");
-        Title.textContent = "Porcent Of Your Life";
 
         var MainProgres = document.createElement('progres-bar');
         MainProgres.setAttribute("id", "MainProgres");
@@ -43,7 +40,6 @@ class DetailsPage extends HTMLElement {
 
         var ReturnButton = document.createElement('return-button');
         
-        this.appendChild(Title);
         this.appendChild(MainProgres);
         this.appendChild(CounterYears);
         this.appendChild(CounterMonths);
