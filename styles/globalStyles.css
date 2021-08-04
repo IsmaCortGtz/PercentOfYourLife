@@ -1,0 +1,38 @@
+/* Global variables */
+:root {
+    --background-color: #222;
+    --main-color: #454545;
+    --text-color: #fff;
+    --color-blue: #1f2c7a;
+}
+
+
+
+
+/* Default styles */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
