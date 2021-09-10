@@ -18,15 +18,22 @@
     font-family: sans-serif;
 }
 
+html, body, .container {
+     height: 100%;
+}
+
 .container {
     max-width: 1000px;
     width: 90%;
-    height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    min-height: -moz-available; /* WebKit-based browsers will ignore this. */
+    min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    min-height: stretch;
 }
 
 input[type='number'] {
