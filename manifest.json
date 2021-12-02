@@ -1,0 +1,14 @@
+{
+    "name": "Pomodoro Technique",
+    "short_name": "Pomodoro",
+    "icons": [{
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }],
+      "lang": "en-US",
+      "start_url": "./index.html",
+      "display": "standalone",
+      "background_color": "#222222",
+      "theme_color": "#222222"
+  }
