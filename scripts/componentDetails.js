@@ -16,25 +16,25 @@ class DetailsPage extends HTMLElement {
 
         var CounterYears = document.createElement('counter-text');
         CounterYears.setAttribute("id", "CounterYears");
-        CounterYears.setAttribute("holder", "Años de vida");
+        CounterYears.setAttribute("holder", "Years of life");
         CounterYears.setAttribute("counter", "3");
         CounterYears.setAttribute("total", "80");
 
         var CounterMonths = document.createElement('counter-text');
         CounterMonths.setAttribute("id", "CounterMonths");
-        CounterMonths.setAttribute("holder", "Meses de vida");
+        CounterMonths.setAttribute("holder", "Months of life");
         CounterMonths.setAttribute("counter", "3");
         CounterMonths.setAttribute("total", "80");
 
         var CounterWeeks = document.createElement('counter-text');
         CounterWeeks.setAttribute("id", "CounterWeeks");
-        CounterWeeks.setAttribute("holder", "Semanas de vida");
+        CounterWeeks.setAttribute("holder", "Weeks of life");
         CounterWeeks.setAttribute("counter", "3");
         CounterWeeks.setAttribute("total", "80");
 
         var CounterDays = document.createElement('counter-text');
         CounterDays.setAttribute("id", "CounterDays");
-        CounterDays.setAttribute("holder", "Dias de vida");
+        CounterDays.setAttribute("holder", "Days of life");
         CounterDays.setAttribute("counter", "3");
         CounterDays.setAttribute("total", "80");
 

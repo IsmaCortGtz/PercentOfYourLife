@@ -12,13 +12,13 @@ class GetAge extends HTMLElement {
         InputAge.setAttribute("class", "inputAge");
         InputAge.setAttribute("id", "inputAge");
         InputAge.setAttribute("type", "number");
-        InputAge.setAttribute("placeholder", "Edad en años");
+        InputAge.setAttribute("placeholder", "Years old in numbers");
 
         var InputContinue = document.createElement('input');
         InputContinue.setAttribute("class", "buttonAge");
         InputContinue.setAttribute("id", "buttonAge");
         InputContinue.setAttribute("type", "button");
-        InputContinue.setAttribute("value", "Continuar");
+        InputContinue.setAttribute("value", "Next");
         InputContinue.setAttribute("onclick", "useContinueButton()");
         
         this.appendChild(InputAge);

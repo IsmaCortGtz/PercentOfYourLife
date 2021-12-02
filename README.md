@@ -1,17 +1,17 @@
 # Percent Of Your Life
 
 
-## ¿Qué es?
+## What is?
 
-Este proyecto es una app simple que, con solo usar tu edad, calcula un aproximado de tu tiempo de vida, haciendo porcentajes y contadores.
+This project is a simple app that, just by using your age, calculates an approximate time of your life, making percentages and counters.
 
-Para obtener estos numeros la app usa un promedio de esperanza de vida global de aproximadamente 80 años, por lo cual es muy probable que los resultados sean poco precisos.
+To obtain these numbers, the app uses an average global life expectancy of approximately 80 years, so the results are very likely to be imprecise.
 
 
-## ¿Cómo funciona?
+## How does it work?
 
-Al ingresar a este [enlace](https://ismacortgtz.github.io/PercentOfYourLife/) veras un campo de texto donde tendras que ingresar tu edad, despues de eso pulsas en `Continuar` y veras toda la informacion calculada suando tu edad, puedes usar el boton `Volver` para ingresar otra edad.
+When entering this [link] (https://ismacortgtz.github.io/PercentOfYourLife/) you will see a text field where you will have to enter your age, after that click on `Next` and you will see all the information calculated using your age , you can use the `Return` button to enter another age.
 
-## Informacion adicional
+## Additional info
 
-Esta app esta hecha en JS puro, utilizando ademas CSS puro, sin librerias ni Frameworks.
+This app is made in vanilla JS, also using vanilla CSS, without libraries or Frameworks.
