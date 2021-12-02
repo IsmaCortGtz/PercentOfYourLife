@@ -10,7 +10,7 @@ To obtain these numbers, the app uses an average global life expectancy of appro
 
 ## How does it work?
 
-When entering this [link] (https://ismacortgtz.github.io/PercentOfYourLife/) you will see a text field where you will have to enter your age, after that click on `Next` and you will see all the information calculated using your age , you can use the `Return` button to enter another age.
+When entering this [link](https://ismacortgtz.github.io/PercentOfYourLife/) you will see a text field where you will have to enter your age, after that click on `Next` and you will see all the information calculated using your age , you can use the `Return` button to enter another age.
 
 ## Additional info
 
