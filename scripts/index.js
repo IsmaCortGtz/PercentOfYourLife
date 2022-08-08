@@ -5,21 +5,21 @@ window.customElements.define("progres-bar", ProgresBar);
 window.customElements.define("return-button", ReturnButton);
 window.customElements.define("counter-text", CounterText);
 
-var yourAge;
-const timeData = {
-    totalYears: 80,
-    totalMonths: 960,
-    totalWeeks: 4171,
-    totalDays: 29200
-}
+const currentDate = new Date();
+const totalYears = 80;
+const totalMonths = Math.ceil(12 * totalYears);
+const totalWeeks = Math.ceil(52.143 * totalYears);
+const totalDays = Math.ceil(365 * totalYears);
+
+var yourDate;
 getSavedAge();
 
 
 //FUnctions
 function useContinueButton(){
-    if (document.getElementById("inputAge").value !== ""){
-        yourAge = parseInt(document.getElementById("inputAge").value);
-        window.localStorage.setItem("savedAge", yourAge.toString());
+    if (document.getElementById("inputDate").valueAsDate !== null){
+        yourDate = getInputDate();
+        window.localStorage.setItem("savedDate", yourDate.toString());
         updateData();
         toggleSections();
     }else{
@@ -28,10 +28,10 @@ function useContinueButton(){
 }
 
 function getSavedAge(){
-    let savedAge = window.localStorage.getItem("savedAge")
-    if (savedAge !== null){
-        document.getElementById("inputAge").value = savedAge;
-        yourAge = parseInt(savedAge);
+    let savedDate = window.localStorage.getItem("savedDate")
+    if (savedDate !== null){
+        yourDate = new Date(savedDate);
+        document.getElementById("inputDate").value = formatDateToInput(yourDate);
         updateData();
         toggleSections();
     }
@@ -39,21 +39,22 @@ function getSavedAge(){
 
 
 function updateData(){
-    let PorcentOfYoutLife = (yourAge * 100) / timeData.totalYears
-    let yourMonths = (yourAge * 12);
-    let yourWeeks = (yourAge * 52);
-    let yourDays = (yourAge * 365);
+    let yourAge = Math.abs(currentDate.getFullYear() - yourDate.getFullYear());
+    let yourMonths = currentDate.getMonth() - yourDate.getMonth() + 12 * (currentDate.getFullYear() - yourDate.getFullYear());
+    let yourWeeks = Math.round(Math.abs(currentDate - yourDate) / (1000 * 60 * 60 * 24 * 7 ));
+    let yourDays = Math.ceil(Math.abs(currentDate - yourDate) / (1000 * 60 * 60 * 24));
+    let PorcentOfYoutLife = (yourAge * 100) / totalYears;
     if (PorcentOfYoutLife >= 100) { PorcentOfYoutLife = 99.9 }
 
     document.getElementById("MainProgres").setAttribute("progres", PorcentOfYoutLife);
     document.getElementById("CounterYears").setAttribute("counter", yourAge);
-    document.getElementById("CounterYears").setAttribute("total", timeData.totalYears);
+    document.getElementById("CounterYears").setAttribute("total", totalYears);
     document.getElementById("CounterMonths").setAttribute("counter", yourMonths);
-    document.getElementById("CounterMonths").setAttribute("total", timeData.totalMonths);
+    document.getElementById("CounterMonths").setAttribute("total", totalMonths);
     document.getElementById("CounterWeeks").setAttribute("counter", yourWeeks);
-    document.getElementById("CounterWeeks").setAttribute("total", timeData.totalWeeks);
+    document.getElementById("CounterWeeks").setAttribute("total", totalWeeks);
     document.getElementById("CounterDays").setAttribute("counter", yourDays);
-    document.getElementById("CounterDays").setAttribute("total", timeData.totalDays);
+    document.getElementById("CounterDays").setAttribute("total", totalDays);
 }
 
 
@@ -65,4 +66,24 @@ function toggleSections() {
         document.getElementById("detailsPage").style.display = "none";
         document.getElementById("getAge").style.display = "flex";
     }
+}
+
+
+function formatDateToInput(date = new Date()) {
+    return [
+      date.getFullYear(),
+      (date.getMonth() + 1).toString().padStart(2, '0'),
+      (date.getDate()).toString().padStart(2, '0'),
+    ].join('-');
+}
+
+
+function getInputDate(){
+    let dateValueText = document.getElementById("inputDate").value;
+    let dateSplitted =dateValueText.split("-");
+    return new Date( [
+        dateSplitted[1], // Month
+        dateSplitted[2], // Day
+        dateSplitted[0]  // Year
+    ].join("/"));
 }

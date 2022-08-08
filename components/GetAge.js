@@ -7,8 +7,8 @@ class GetAge extends HTMLElement {
 
         var InputAge = document.createElement('input');
         InputAge.setAttribute("class", "inputAge");
-        InputAge.setAttribute("id", "inputAge");
-        InputAge.setAttribute("type", "number");
+        InputAge.setAttribute("id", "inputDate");
+        InputAge.setAttribute("type", "date");
         InputAge.setAttribute("placeholder", "Years old in numbers");
         InputAge.addEventListener("keyup", (event) => event.code === "Enter" ? useContinueButton() : null);
 
