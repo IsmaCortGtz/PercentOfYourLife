@@ -1,26 +1,8 @@
 class ProgresBar extends HTMLElement {
     constructor(){
         super();
-    }
-
-    static get observedAttributes(){
-        return ["progres"];
-    }
-
-    attributeChangedCallback(nameAtr, oldValue, newValue){
-        switch(nameAtr){
-            case "progres":
-                this.Text.textContent = newValue + "%";
-                this.Progres.style.width = newValue + "%";
-                break;
-        }
-    }
-
-
-    connectedCallback(){
 
         this.setAttribute("class", "ProgresBar");
-        
 
         var Holder = document.createElement('div');
         Holder.setAttribute("class", "ProgresHolder");
@@ -35,7 +17,18 @@ class ProgresBar extends HTMLElement {
         Holder.appendChild(this.Progres);
         this.appendChild(Holder);
         this.appendChild(this.Text);
+    }
 
-        
+    static get observedAttributes(){
+        return ["progres"];
+    }
+
+    attributeChangedCallback(nameAtr, oldValue, newValue){
+        switch(nameAtr){
+            case "progres":
+                this.Text.textContent = newValue + "%";
+                this.Progres.style.width = newValue + "%";
+                break;
+        }
     }
 }

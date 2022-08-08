@@ -15,6 +15,10 @@ class CounterText extends HTMLElement {
         this.Total = document.createElement("div");
         this.Total.setAttribute("class", "CounterTotal");
         this.Total.textContent = " / " + this.getAttribute("total");
+
+        this.appendChild(this.Holder);
+        this.appendChild(this.Counter);
+        this.appendChild(this.Total);
     }
 
     static get observedAttributes(){
@@ -33,14 +37,5 @@ class CounterText extends HTMLElement {
                 this.Total.textContent = " / " + newValue;
                 break;
         }
-    }
-
-
-    connectedCallback(){
-
-        this.appendChild(this.Holder);
-        this.appendChild(this.Counter);
-        this.appendChild(this.Total);
-
     }
 }

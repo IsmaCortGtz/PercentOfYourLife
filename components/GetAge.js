@@ -1,10 +1,7 @@
 class GetAge extends HTMLElement {
     constructor(){
         super();     
-    }
 
-
-    connectedCallback(){
         this.setAttribute("class", "getAge");
         this.setAttribute("id", "getAge");
 
@@ -13,6 +10,7 @@ class GetAge extends HTMLElement {
         InputAge.setAttribute("id", "inputAge");
         InputAge.setAttribute("type", "number");
         InputAge.setAttribute("placeholder", "Years old in numbers");
+        InputAge.addEventListener("keyup", (event) => event.code === "Enter" ? useContinueButton() : null);
 
         var InputContinue = document.createElement('input');
         InputContinue.setAttribute("class", "buttonAge");
