@@ -1,3 +1,8 @@
+// Define Service Worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+}
+
 //Define custome elements
 window.customElements.define("get-age", GetAge);
 window.customElements.define("details-page", DetailsPage);
